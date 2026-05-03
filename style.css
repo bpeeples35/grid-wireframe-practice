@@ -20,6 +20,7 @@ body {
     "footer footer footer";
 }
 
+
 /* Shared styles */
 header,
 aside,
@@ -69,9 +70,9 @@ footer {
 
 /* Columns inside main */
 .columns {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  justify-content: center;
 }
 
 .column {
