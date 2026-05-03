@@ -1,0 +1,82 @@
+body {
+  background: #d3d3d3;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Grid */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 15px;
+  background: #ccc;
+
+  display: grid;
+  gap: 15px;
+
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+}
+
+/* Shared styles */
+header,
+aside,
+main,
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Layout areas */
+header {
+  grid-area: header;
+  background: #a61c5d;
+}
+
+.left {
+  grid-area: left;
+  background: #1f6f8b;
+}
+
+.right {
+  grid-area: right;
+  background: #3aa6b9;
+}
+
+main {
+  grid-area: main;
+  background: #2ecc71;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer {
+  grid-area: footer;
+  background: #e26a2c;
+}
+
+/* Inside main */
+.article {
+  font-size: 18px;
+}
+
+/* Columns inside main */
+.columns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.column {
+  background: #ff2e63;
+  padding: 10px;
+  border-radius: 6px;
+  flex: 1;
+}
